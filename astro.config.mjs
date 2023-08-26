@@ -4,4 +4,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
     site: "https://antoniomrtz.github.io",
     base: "/SpotifyElectron_Web",
+/*     compressHTML: true,
+ */
 });
