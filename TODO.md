@@ -1,3 +1,3 @@
 # TODO
 
-* github pages deploy
+* header size when not 1080p
