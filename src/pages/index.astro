@@ -12,7 +12,10 @@ import MainContent from "../components/MainContent.astro";
         <header>
             <div class="d-flex justify-content-center">
                 <div class="d-flex flex-column justify-content-center">
-                    <div class="d-flex align-items-center">
+                    <div
+                        class="d-flex align-items-center flex-column"
+                        style="margin-bottom: 3rem !important; margin-top: 1rem;"
+                    >
                         <h1>
                             Welcome to <span
                                 class="text-gradient"
@@ -20,6 +23,7 @@ import MainContent from "../components/MainContent.astro";
                                 >Spotify Electron</span
                             >
                         </h1>
+                        <h4 style="color:#adaaaa">Made by Antonio Martínez</h4>
                     </div>
                     <div
                         class="d-flex align-items-center justify-content-center"
@@ -38,33 +42,34 @@ import MainContent from "../components/MainContent.astro";
                 </div>
             </div>
 
-            <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100%">
-                <div class="container-fluid d-flex justify-content-center">
-                  
-                  <img class="tech-ico" src="icons/react.png" alt="">
-                  <img class="tech-ico" src="icons/typescript.png" alt="">
-                  <img class="tech-ico" src="icons/electronjs.png" alt="">
-                  <img class="tech-ico" src="icons/python.png" alt="">
-                  <img class="tech-ico" src="icons/mongodb.png" alt="">
-                  <img class="tech-ico" src="icons/css.png" alt="">
-                  <img class="tech-ico" src="icons/fastapi.png" alt="">
-                  <img class="tech-ico" src="icons/boostrap.png" alt="">
-                  <img class="tech-ico" src="icons/materialui.png" alt="">
-                  <img class="tech-ico" src="icons/github_actions.png" alt="">
-
-
-
+            <div
+                class="d-flex flex-column justify-content-center align-items-center"
+                style="height: 100%"
+            >
+                <div
+                    class="d-flex justify-content-center"
+                    style="border-bottom: 1px solid var(--app-logo-color);padding: 1%;"
+                >
+                    <img class="tech-ico" src="icons/react.png" alt="" />
+                    <img class="tech-ico" src="icons/typescript.png" alt="" />
+                    <img class="tech-ico" src="icons/electronjs.png" alt="" />
+                    <img class="tech-ico" src="icons/python.png" alt="" />
+                    <img class="tech-ico" src="icons/mongodb.png" alt="" />
+                    <img class="tech-ico" src="icons/css.png" alt="" />
+                    <img class="tech-ico" src="icons/fastapi.png" alt="" />
+                    <img class="tech-ico" src="icons/boostrap.png" alt="" />
+                    <img class="tech-ico" src="icons/materialui.png" alt="" />
+                    <img
+                        class="tech-ico"
+                        src="icons/github_actions.png"
+                        alt=""
+                    />
                 </div>
-
-      <!--           <div class="container-fluid d-flex justify-content-center">
-                    <h3>Made by Antonio Martínez Fernández</h3>
-                </div> -->
             </div>
         </header>
     </div>
 
-    <MainContent>
-    </MainContent>
+    <MainContent />
 </Layout>
 
 <style>
@@ -94,8 +99,6 @@ import MainContent from "../components/MainContent.astro";
         font-weight: 700;
         line-height: 1;
         text-align: center;
-        margin-bottom: 3rem !important;
-        margin-top: 1rem;
     }
     .text-gradient {
         background-image: var(--accent-gradient);
@@ -149,8 +152,8 @@ import MainContent from "../components/MainContent.astro";
         filter: brightness(0.75);
     }
 
-    .tech-ico{
-      width: 48px !important;
-      margin: 0 10px 0 10px !important;
+    .tech-ico {
+        width: 38px !important;
+        margin: 0 10px 0 10px !important;
     }
 </style>

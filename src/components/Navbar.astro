@@ -41,9 +41,30 @@
                     <a class="nav-link" href="#">Link</a>
                 </li>
             </ul>
-            <div style="margin-right: 1.5rem;">
-                <a href="https://github.com/AntonioMrtz/SpotifyElectron">
-                    <i class="fa-brands fa-github fa-lg fa-fw" style="color: white;font-size: 1.75rem;"></i>
+            <div
+                style="margin-right: 1.5rem; display: flex; justify-content: center; align-items: center;"
+            >
+                <a
+                    class="navbar-item-right"
+                    href="https://github.com/AntonioMrtz/SpotifyElectron"
+                >
+                    <img
+                        class="img-fluid"
+                        src="icons/github.png"
+                        alt="Antonio Martinez Photo Icon"
+                        style="border-radius: 999px; width: 42px; height: 42px;"
+                    />
+                </a>
+                <a
+                    class="navbar-item-right"
+                    href="https://github.com/AntonioMrtz/"
+                >
+                    <img
+                        class="img-fluid"
+                        src="icons/AntonioMrtzIco.jpg"
+                        alt="Github Icon"
+                        style="border-radius: 999px; width: 38px; height: 38px;"
+                    />
                 </a>
             </div>
         </div>
@@ -51,7 +72,7 @@
 </nav>
 
 <style>
-    #nav-container{
+    #nav-container {
         border-bottom: 1px solid var(--spacer);
         padding: 0.75rem 0 0.75rem 0 !important;
     }
@@ -69,7 +90,6 @@
         font-size: 1.35rem !important;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
-
     }
 
     .nav-item {
@@ -88,5 +108,9 @@
 
     .nav-link:hover {
         filter: brightness(0.75);
+    }
+
+    .navbar-item-right {
+        margin-right: 4px;
     }
 </style>
