@@ -14,7 +14,10 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Spotify Electron Web" />
@@ -43,6 +46,11 @@
 </html>
 <style is:global>
     :root {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+
         --app-logo-color: #9ad9ea;
         --app-logo-color-darker: #56afc8;
 
@@ -58,7 +66,7 @@
 
         --backkground: #13151a;
         --secondary-color: #292c32;
-        --spacer : #4e5053;
+        --spacer: #4e5053;
     }
     html {
         font-family: system-ui, sans-serif !important;
@@ -70,6 +78,10 @@
     body {
         background: var(--backkground) !important;
         overflow-x: hidden !important;
+    }
+
+    a {
+        text-decoration: none;
     }
     ::-webkit-scrollbar {
         width: 12px;
