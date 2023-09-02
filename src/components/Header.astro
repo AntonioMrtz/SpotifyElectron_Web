@@ -53,7 +53,7 @@ import pyIco from "../../public/icons/python.png?url";
         style="height: 100%"
     >
         <div
-            class="d-flex justify-content-center"
+            class="d-flex justify-content-center tech-wrapper"
             style="border-bottom: 1px solid var(--app-logo-color);padding: 1%;"
         >
             <img class="tech-ico" src={reactIco} alt="react icon" />
@@ -119,4 +119,10 @@ header {
         width: 32px !important;
         margin: 0 10px 0 10px !important;
     }
+
+    .tech-ico:hover{
+        transition: transform 0.1s; /* Add a transition on the transform property */
+        transform: scale(1.2);
+    }
+    
 </style>
