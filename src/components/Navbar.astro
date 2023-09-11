@@ -33,7 +33,7 @@ import antonioMrtzIcon from "../../public/icons/AntonioMrtzIco.jpg?url";
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li>
+                <li class="brand-li">
                     <a
                         class="navbar-brand"
                         href="#"
@@ -107,6 +107,11 @@ import antonioMrtzIcon from "../../public/icons/AntonioMrtzIco.jpg?url";
         padding-bottom: 0 !important;
     }
 
+    .brand-li{
+
+        margin-right: 1rem;
+    }
+
     .nav-item {
         display: flex;
         justify-content: center;
@@ -115,14 +120,17 @@ import antonioMrtzIcon from "../../public/icons/AntonioMrtzIco.jpg?url";
 
     .nav-link {
         color: white !important;
-        font-weight: 400 !important;
+        font-weight: 500 !important;
         font-size: 1.15rem !important;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        padding-right: 1rem !important;
+        padding-left: 1 rem !important;
     }
 
     .nav-link:hover {
         filter: brightness(0.75);
+        transform: scale(1.1);
     }
 
     .navbar-item-right {
