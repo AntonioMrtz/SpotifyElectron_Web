@@ -1,62 +1,45 @@
 ---
-
-
-const {icon} = Astro.props;
-const {title} = Astro.props;
-const {text} = Astro.props;
-
+const { icon } = Astro.props;
+const { title } = Astro.props;
+const { text } = Astro.props;
 ---
 
 <div class="tech-card">
-
     <div class="img-wrapper">
-        <img src={icon} alt="">
+        <img src={icon} alt="" />
     </div>
 
     <div class="header-wrapper">
-
         <div class="main-text">
             {title}
         </div>
         <div class="secondary-text">
             {text}
         </div>
-
     </div>
-
 </div>
 
-
-
 <style>
-
-    .tech-card{
-
+    .tech-card {
         display: flex;
         flex-direction: column;
         padding: 1rem;
         border-radius: 8px;
         border: 1px solid var(--spacer);
         background-color: var(--dark-filler);
-         
     }
 
-    .main-text{
-
+    .main-text {
         font-size: 2rem;
         font-weight: 600;
     }
 
-    .secondary-text{
-
+    .secondary-text {
         color: var(--subheader-text);
     }
 
-    .img-wrapper img{
-
+    .img-wrapper img {
         width: 48px;
         height: 48px;
     }
-
-
 </style>
