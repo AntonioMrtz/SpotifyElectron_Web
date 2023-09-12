@@ -1,0 +1,104 @@
+---
+import TechCard from "./TechCard.astro";
+
+import reactIco from "../../public/icons/react.png?url";
+import tsIco from "../../public/icons/typescript.png?url";
+import electronIco from "../../public/icons/electronjs.png?url";
+import mongoIco from "../../public/icons/mongodb.png?url";
+import cssIco from "../../public/icons/css.png?url";
+import pyIco from "../../public/icons/python.png?url";
+import fastApiIco from "../../public/icons/fastapi.png?url";
+import boostrapIco from "../../public/icons/boostrap.png?url";
+import miuIco from "../../public/icons/materialui.png?url";
+import gaIco from "../../public/icons/github_actions.png?url";
+
+const techCardData = [
+    {
+        icon: reactIco,
+        title: "ReactJs",
+        text: "",
+    },
+    {
+        icon: tsIco,
+        title: "TypeScript",
+        text: "",
+    },
+    {
+        icon: electronIco,
+        title: "ElectronJs",
+        text: "",
+    },
+    {
+        icon: mongoIco,
+        title: "MongoDb",
+        text: "",
+    },
+    {
+        icon: cssIco,
+        title: "Css",
+        text: "",
+    },
+    {
+        icon: pyIco,
+        title: "Python",
+        text: "",
+    },
+    {
+        icon: fastApiIco,
+        title: "Fast API",
+        text: "",
+    },
+    {
+        icon: boostrapIco,
+        title: "Boostrap",
+        text: "",
+    },
+    /* {
+        icon: miuIco,
+        title: "Material UI",
+        text: "",
+    }, */
+    {
+        icon: gaIco,
+        title: "Github Actions",
+        text: "",
+    },
+];
+---
+
+<div class="grid">
+    {
+        techCardData.map((tech) => {
+            return (
+                <TechCard
+                    icon={tech.icon}
+                    title={tech.title}
+                    text={tech.text}
+                />
+            );
+        })
+    }
+</div>
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(20vw, 1fr));
+        gap: 20px;
+        padding: 20px;
+
+        margin-bottom: 8rem;
+    }
+
+    @media (max-width: 897px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 560px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
