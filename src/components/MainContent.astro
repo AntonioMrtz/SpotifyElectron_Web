@@ -16,7 +16,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
                 <img class="img-fluid" src={home} alt="" />
 
                 <div class="theapp-section-header">
-                    <h3>Header</h3>
+                    <h3>Explore the best artists and music</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
@@ -34,7 +34,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
             </div>
             <div class="theapp-section section-right">
                 <div class="theapp-section-header">
-                    <h3>Header</h3>
+                    <h3>Organize your favorite music in playlists</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
@@ -57,7 +57,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
                 <img class="img-fluid" src={uploadSong} alt="" />
 
                 <div class="theapp-section-header">
-                    <h3>Header</h3>
+                    <h3>Upload your songs</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
@@ -76,7 +76,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
 
             <div class="theapp-section section-right">
                 <div class="theapp-section-header">
-                    <h3>Header</h3>
+                    <h3>Discover and try the new interface</h3>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
@@ -175,6 +175,17 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
         flex-direction: column;
     }
 
+    .theapp-section-header h3{
+
+        padding-bottom: 1%;
+        border-bottom: 2px solid var(--app-logo-color-darker);
+    }
+
+    .theapp-section-header h3::first-letter{
+
+        color: var(--app-logo-color-darker);
+    }
+
     .section-left img {
         margin-right: 3rem;
         filter: drop-shadow(-20px 15px 10px var(--secondary-color));
@@ -188,7 +199,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
     @media (max-width: 989px) {
         .theapp-section {
             flex-direction: column;
-            padding: 0 5% 0 5%;
+            padding: 0 2.5rem 0 2.5rem;
         }
         .theapp-section img {
             margin: 2rem 0 0 0 !important;
