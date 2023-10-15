@@ -2,9 +2,10 @@
 const { icon } = Astro.props;
 const { title } = Astro.props;
 const { text } = Astro.props;
+const { link } = Astro.props;
 ---
 
-<div class="tech-card">
+<a class="tech-card" href={link}>
     <div class="img-wrapper">
         <img src={icon} alt="" />
     </div>
@@ -17,21 +18,32 @@ const { text } = Astro.props;
             {text}
         </div>
     </div>
-</div>
+</a>
 
 <style>
     .tech-card {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         padding: 1rem;
         border-radius: 8px;
-        border: 1px solid var(--spacer);
-        background-color: var(--dark-filler);
+        border: 1px solid var(--spacer) !important;
+        background-color: var(--dark-filler) !important;
+        text-align: left;
+    }
+
+    .tech-card:hover {
+        background-color: var(--spacer);
+        box-shadow: rgb(38, 57, 77) 0px 10px 30px -10px;
+    }
+
+    .tech-card:hover .main-text {
+        color: var(--app-logo-color);
     }
 
     .main-text {
         font-size: 2rem;
         font-weight: 600;
+        color: white;
     }
 
     .secondary-text {
