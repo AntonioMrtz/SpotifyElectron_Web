@@ -9,7 +9,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
     <img class="img-fluid" src={home} alt="" />
 
     <div class="theapp-section-header">
-        <h3>Explore the best artists and music</h3>
+        <h3 class="reveal">Explore the best artists and music</h3>
         <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -25,7 +25,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
 </div>
 <div class="theapp-section section-right">
     <div class="theapp-section-header">
-        <h3>Organize your favorite music in playlists</h3>
+        <h3 class="reveal">Organize your favorite music in playlists</h3>
         <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -46,7 +46,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
     <img class="img-fluid" src={uploadSong} alt="" />
 
     <div class="theapp-section-header">
-        <h3>Upload your songs</h3>
+        <h3 class="reveal">Upload your songs</h3>
         <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -63,7 +63,7 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
 
 <div class="theapp-section section-right">
     <div class="theapp-section-header">
-        <h3>Discover and try the new interface</h3>
+        <h3 class="reveal">Discover and try the new interface</h3>
         <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -141,4 +141,66 @@ import updatePlaylist from "../../public/walktrough/UpdatePlaylist.png?url";
             order: 2;
         }
     }
+
+    /* Animation */
+
+    .swing-in-left-fwd {
+        -webkit-animation: swing-in-left-fwd 0.5s
+            cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        animation: swing-in-left-fwd 0.5s
+            cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    }
+
+    @-webkit-keyframes swing-in-left-fwd {
+        0% {
+            -webkit-transform: rotateY(100deg);
+            transform: rotateY(100deg);
+            -webkit-transform-origin: left;
+            transform-origin: left;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+            -webkit-transform-origin: left;
+            transform-origin: left;
+            opacity: 1;
+        }
+    }
+    @keyframes swing-in-left-fwd {
+        0% {
+            -webkit-transform: rotateY(100deg);
+            transform: rotateY(100deg);
+            -webkit-transform-origin: left;
+            transform-origin: left;
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+            -webkit-transform-origin: left;
+            transform-origin: left;
+            opacity: 1;
+        }
+    }
 </style>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("swing-in-left-fwd");
+            } else {
+                reveals[i].classList.remove("swing-in-left-fwd");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+</script>
