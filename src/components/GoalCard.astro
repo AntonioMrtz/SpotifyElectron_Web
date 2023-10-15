@@ -1,0 +1,19 @@
+---
+const { icon } = Astro.props;
+const { text } = Astro.props;
+---
+
+<div class="d-flex flex-row wrapperGoalCard">
+    <img src={icon} alt="" />
+    <p class="m-auto">{text}</p>
+</div>
+
+<style>
+    .wrapperGoalCard {
+        gap: 14px;
+    }
+
+    .wrapperGoalCard img{
+        width: 62px;
+    }
+</style>

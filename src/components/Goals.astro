@@ -1,0 +1,68 @@
+---
+import scalabilityIco from "../../public/icons/goals-icons/icons8-en-alza-48.png?url";
+import gitForkIco from "../../public/icons/goals-icons/icons8-bifurcación-código-48.png?url";
+import cloneIco from "../../public/icons/goals-icons/icons8-clon-48.png?url";
+import goodPracticesIco from "../../public/icons/goals-icons/icons8-buena-calidad-48.png?url";
+import writeIco from "../../public/icons/goals-icons/icons8-escribir-48.png?url";
+import testingIco from "../../public/icons/goals-icons/icons8-prueba-48.png?url";
+import securityIco from "../../public/icons/goals-icons/icons8-seguridad-48.png?url";
+import serverIco from "../../public/icons/goals-icons/icons8-servidor-48.png?url";
+import groupTaskIco from "../../public/icons/goals-icons/icons8-tarea-grupal-48.png?url";
+import GoalCard from "./GoalCard.astro";
+
+const goalsCardData = [
+    {
+        icon: scalabilityIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: gitForkIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: cloneIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: goodPracticesIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: writeIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: testingIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: securityIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: serverIco,
+        text: "Focused on scalability",
+    },
+    {
+        icon: groupTaskIco,
+        text: "Focused on scalability",
+    },
+];
+---
+
+<div class="d-flex flex-column goals-wrapper">
+    {
+        goalsCardData.map((goalCardData) => {
+            return (
+                <GoalCard icon={goalCardData.icon} text={goalCardData.text} />
+            );
+        })
+    }
+</div>
+
+<style>
+    .goals-wrapper {
+        margin-bottom: 8rem;
+        gap: 14px;
+    }
+</style>
