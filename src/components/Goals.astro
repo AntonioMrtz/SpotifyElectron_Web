@@ -26,7 +26,7 @@ const goalsCardData = [
     },
     {
         icon: goodPracticesIco,
-        text: "Develop with the best programming practices",
+        text: "Developed with the best programming practices",
     },
     {
         icon: writeIco,
@@ -55,23 +55,28 @@ const goalsCardData = [
 ];
 ---
 
-
 <div class="d-flex flex-row wrapperGoalCard">
     <div class="d-flex flex-column goals-column">
         {
-            goalsCardData.slice(0,5).map((goalCardData) => {
+            goalsCardData.slice(0, 5).map((goalCardData) => {
                 return (
-                    <GoalCard icon={goalCardData.icon} text={goalCardData.text} />
+                    <GoalCard
+                        icon={goalCardData.icon}
+                        text={goalCardData.text}
+                    />
                 );
             })
         }
     </div>
-    
+
     <div class="d-flex flex-column goals-column">
         {
-            goalsCardData.slice(5,goalsCardData.length).map((goalCardData) => {
+            goalsCardData.slice(5, goalsCardData.length).map((goalCardData) => {
                 return (
-                    <GoalCard icon={goalCardData.icon} text={goalCardData.text} />
+                    <GoalCard
+                        icon={goalCardData.icon}
+                        text={goalCardData.text}
+                    />
                 );
             })
         }
@@ -79,9 +84,7 @@ const goalsCardData = [
 </div>
 
 <style>
-
-    .wrapperGoalCard{
-
+    .wrapperGoalCard {
         padding-bottom: 8rem !important;
         gap: 60px;
     }
@@ -90,14 +93,12 @@ const goalsCardData = [
     }
 
     @media (max-width: 1332px) {
-        
-        .wrapperGoalCard{
+        .wrapperGoalCard {
             flex-direction: column !important;
             gap: 28px;
         }
-        .goals-column{
+        .goals-column {
             gap: 28px;
         }
     }
-
 </style>

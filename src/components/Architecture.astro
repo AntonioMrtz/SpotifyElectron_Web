@@ -16,18 +16,18 @@ import backendEndpointDiagram from "../../public/architecture/backend-endpoints.
             <div class="architecture-secondary-text-wrapper">
                 <h3>Electron</h3>
                 <p>
-                    Develop once and rus everywhere is a must if you have a
+                    Develop once and run everywhere is a must if you have a
                     small team of developers. With Electron the application
                     interface can access easily OS resources such as file
                     explorer, clipboard, notification system... The app can be
                     installed as a normal executable and loads significantly
-                    faster when its build. Security is one of the most important
-                    Electron goals so every connection with the system OS must
-                    be declared beforehand in the preload file. Also both
-                    renderer and main threads work in isolation mode and must
-                    communicate with the Context Bridge via IPC (Inter-Process
-                    Comunication), this ensures security and stability of the
-                    app.
+                    faster when it's build. Security is one of the most
+                    important Electron goals so every connection with the system
+                    OS must be declared beforehand in the preload file. Also
+                    both renderer and main threads work in isolation mode and
+                    must communicate with the Context Bridge via IPC
+                    (Inter-Process Comunication), this ensures security and
+                    stability of the app.
                 </p>
             </div>
             <div class="architecture-secondary-text-wrapper">
@@ -41,7 +41,7 @@ import backendEndpointDiagram from "../../public/architecture/backend-endpoints.
                     development, this also make the app more robust. React
                     offers us abstraction, hierarchy of components and most
                     important encapsulation between the components. This allows
-                    for parallel development without making and impact on others
+                    parallel development without making and impact on others
                     code.
                 </p>
             </div>
@@ -94,7 +94,7 @@ import backendEndpointDiagram from "../../public/architecture/backend-endpoints.
             <div class="architecture-secondary-text-wrapper">
                 <h3>MongoDB</h3>
                 <p>
-                    Perfect for fast development and constant chaning features.
+                    Perfect for fast development and constant changing features.
                     Stores hashed password from users and all the app data
                     except from song files. Python Backend access the database
                     by using PyMongo driver. It has different databases for both
@@ -116,6 +116,11 @@ import backendEndpointDiagram from "../../public/architecture/backend-endpoints.
         </div>
         <div class="architecture-secondary-text-wrapper">
             <h3>Safety</h3>
+            <p>
+                All endpoints are protected by JWT Token Authorization, if you
+                want to make requests to the API you will need to add the
+                "Authorization" header to all requests.
+            </p>
             <h3>API Documentation</h3>
             <p>
                 API documentation is available by checking <a
@@ -124,11 +129,6 @@ import backendEndpointDiagram from "../../public/architecture/backend-endpoints.
                 > or running the backend and accessing <strong
                     >http://127.0.0.1:8000/docs</strong
                 >
-            </p>
-            <p>
-                All endpoints are protected by JWT Token Authorization, if you
-                want to make requests to the API you will need to add the
-                "Authorization" header to all requests.
             </p>
         </div>
     </section>
