@@ -4,7 +4,7 @@ const { text } = Astro.props;
 ---
 
 <div class="d-flex flex-row wrapperGoalCard">
-    <img src={icon} alt="" />
+    <img src={icon} alt=`${icon}` />
     <p>{text}</p>
 </div>
 
@@ -29,6 +29,10 @@ const { text } = Astro.props;
     @media (max-width: 1332px) {
         .wrapperGoalCard {
             gap: 28px;
+            padding: 0 14px 0 14px;
+        }
+        p{
+            font-size: 1.25rem !important;
         }
     }
 </style>
