@@ -1,6 +1,8 @@
 ---
 import architectureDiagram from "../../public/architecture/master-streaming-lambda-arch.png?url";
 import backendEndpointDiagram from "../../public/architecture/backend-endpoints.png?url";
+import songArchitecture from "../../public/architecture/song_architecture_aws.png?url";
+
 ---
 
 <div class="architecture-wrapper">
@@ -83,6 +85,11 @@ import backendEndpointDiagram from "../../public/architecture/backend-endpoints.
             </div>
             <div class="architecture-secondary-text-wrapper">
                 <h3>AWS Lambda</h3>
+                <img
+                    class="img-fluid"
+                    src={songArchitecture}
+                    alt="song architecture diagram"
+                />
                 <p>
                     This service is working like an API between the Backend and
                     the AWS services. Songs are stored in S3 buckets and for
