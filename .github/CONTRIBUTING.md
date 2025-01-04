@@ -19,7 +19,7 @@ _It's important to leave a comment about working on an issue so the maintainer c
 _Trello links are used to synchronize Github issues with board tasks, we're not accepting new members due to free tier limitation until you have contributed at least twice_.
 ## 🙍‍♂️ Contributors list
 
-Once you contribute to the project, your name and GitHub profile will be added into the CONTRIBUTORS list of the main project.
+Once you contribute to the project, your name and GitHub profile will be added into the [CONTRIBUTORS list](https://github.com/AntonioMrtz/SpotifyElectron/blob/master/docs/CONTRIBUTORS.md) of the main project.
 
 ## 📦 Required Software
 
