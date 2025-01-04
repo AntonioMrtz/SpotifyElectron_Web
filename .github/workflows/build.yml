@@ -1,4 +1,4 @@
-name: Eslint
+name: Build check
 
 on:
   pull_request:
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Run eslint
+      - name: Run build
         run: |
           npm install
-          npm run lint:check
+          npm run build

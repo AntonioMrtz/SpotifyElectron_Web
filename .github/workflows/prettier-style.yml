@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Change directory and run commands
+      - name: Run prettier format check
         run: |
           npm install
           npm run format:check
