@@ -9,6 +9,7 @@
     "format:check": "prettier src/ --check",
     "lint:check": "eslint",
     "lint:fix": "eslint --fix",
+    "check": "astro check",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
