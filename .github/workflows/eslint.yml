@@ -1,4 +1,4 @@
-name: Prettier Style
+name: Eslint
 
 on:
   pull_request:
@@ -22,4 +22,4 @@ jobs:
       - name: Change directory and run commands
         run: |
           npm install
-          npm run format:check
+          npm run eslint:check

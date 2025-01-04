@@ -6,7 +6,7 @@ import explorar from "../../public/walkthrough/Explorar.webp?url";
 ---
 
 <div class="theapp-section section-left">
-  <img class="img-fluid" src={home} alt="Home screenshot" />
+  <img alt="Home screenshot" class="img-fluid" src={home} />
 
   <div class="theapp-section-header">
     <h3 class="reveal">Explore the best artists and music</h3>
@@ -26,11 +26,11 @@ import explorar from "../../public/walkthrough/Explorar.webp?url";
     </p>
   </div>
 
-  <img class="img-fluid" src={playlist} alt="Playlist screenshot" />
+  <img alt="Playlist screenshot" class="img-fluid" src={playlist} />
 </div>
 
 <div class="theapp-section section-left">
-  <img class="img-fluid" src={uploadSong} alt="Upload song screenshot" />
+  <img alt="Upload song screenshot" class="img-fluid" src={uploadSong} />
 
   <div class="theapp-section-header">
     <h3 class="reveal">Upload your songs</h3>
@@ -52,7 +52,7 @@ import explorar from "../../public/walkthrough/Explorar.webp?url";
     </p>
   </div>
 
-  <img class="img-fluid" src={explorar} alt="Explorar screenshot" />
+  <img alt="Explorar screenshot" class="img-fluid" src={explorar} />
 </div>
 
 <style>
@@ -119,6 +119,7 @@ import explorar from "../../public/walkthrough/Explorar.webp?url";
 
   /* Animation */
 
+  // eslint-disable-next-line astro/no-unused-css-selector
   .swing-in-left-fwd {
     -webkit-animation: swing-in-left-fwd 0.5s
       cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
@@ -127,6 +128,7 @@ import explorar from "../../public/walkthrough/Explorar.webp?url";
   }
 
   @-webkit-keyframes swing-in-left-fwd {
+    // eslint-disable-next-line astro/no-unused-css-selector
     0% {
       -webkit-transform: rotateY(100deg);
       transform: rotateY(100deg);
@@ -134,6 +136,7 @@ import explorar from "../../public/walkthrough/Explorar.webp?url";
       transform-origin: left;
       opacity: 0;
     }
+    // eslint-disable-next-line astro/no-unused-css-selector
     100% {
       -webkit-transform: rotateY(0);
       transform: rotateY(0);

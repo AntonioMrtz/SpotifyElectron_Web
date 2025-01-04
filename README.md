@@ -51,7 +51,6 @@ pre-commit install --hook-type commit-msg
 pre-commit run --all-files
 ```
 
-
 ## 🧩 Extensions (VSCode)
 
 1. Open the project Backend or Frontend (each one has its own recommended extensions)
@@ -61,7 +60,8 @@ pre-commit run --all-files
 5. Workspace recommended
 6. Install workspace recommended
 
-----
+---
+
 <br>
 
 ![Home](assets/home_landing_page.png)

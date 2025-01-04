@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "format:write": "prettier src/ --write .",
-    "format:check": "prettier src/ --check .",
+    "format:write": "prettier src/ --write",
+    "format:check": "prettier src/ --check",
+    "lint:check":"eslint",
+    "lint:fix":"eslint --fix",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -15,6 +17,8 @@
     "astro": "^5.1.2"
   },
   "devDependencies": {
+    "eslint": "^9.17.0",
+    "eslint-plugin-astro": "^1.3.1",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1"
   }
