@@ -1,6 +1,6 @@
 # Spotify Electron Web
 
-🎯 A lading page designed to promote the desktop music streaming application Spotify Electron. Built using [Astro](https://astro.build/).
+🎯 A lading page designed to promote the desktop music streaming application [Spotify Electron](https://github.com/AntonioMrtz/SpotifyElectron). Built using [Astro](https://astro.build/).
 
 ![Inicio](assets/landing_page.png)
 <br>
