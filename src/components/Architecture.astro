@@ -3,228 +3,219 @@ import architectureDiagram from "../../public/architecture/master-streaming-lamb
 import backendEndpointDiagram from "../../public/architecture/backend-endpoints.png?url";
 import songArchitecture from "../../public/architecture/song_architecture_aws.png?url";
 import frontendArchitecture from "../../public/architecture/frontend-arch.png?url";
-
-
 ---
 
 <div class="architecture-wrapper">
-    <section>
-        <h2>Global Architecture</h2>
-        <div>
-            <img
-                class="img-fluid"
-                src={architectureDiagram}
-                alt="architecture-diagram"
-            />
+  <section>
+    <h2>Global Architecture</h2>
+    <div>
+      <img
+        alt="architecture-diagram"
+        class="img-fluid"
+        src={architectureDiagram}
+      />
 
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Electron</h3>
-                <p>
-                    Develop once and run everywhere is a must if you have a
-                    small team of developers. With Electron the application
-                    interface can access easily OS resources such as file
-                    explorer, clipboard, notification system... The app can be
-                    installed as a normal executable and loads significantly
-                    faster when it's build. Security is one of the most
-                    important Electron goals so every connection with the system
-                    OS must be declared beforehand in the preload file. Also
-                    both renderer and main threads work in isolation mode and
-                    must communicate with the Context Bridge via IPC
-                    (Inter-Process Comunication), this ensures security and
-                    stability of the app.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>React with TypeScript</h3>
-                <p>
-                    Runtime errors usually take longer to debug and can cause
-                    unexpected issues on production. By using TypeScript &
-                    EsLint the amount of bugs and other issues decreased by a
-                    lot. Thanks to the type safety and strict linter mode most
-                    of the runtime problems can be avoided and fixed in
-                    development, this also make the app more robust. React
-                    offers us abstraction, hierarchy of components and most
-                    important encapsulation between the components. This allows
-                    parallel development without making and impact on others
-                    code.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Interface</h3>
-                <img
-                    class="img-fluid"
-                    src={frontendArchitecture}
-                    alt="frontend architecture diagram"
-                />
-                <p>
-                    Graphical elements of the interface are developed using web
-                    tech like <strong>HTML</strong> and <strong>CSS</strong>,
-                    also the app uses components from <strong>MaterialUI</strong
-                    > and inline styles with <strong>Boostrap</strong> that
-                    speeds up the development process.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Python Backend API</h3>
-                <p>
-                    Develop using <a
-                        href="https://fastapi.tiangolo.com/tutorial/bigger-applications/"
-                        >FastAPI larger apps architecture</a
-                    > with middlewares for allowing CORS requests and allow the
-                    user to reach certain resources with a JWT Token system.
-                    Song storage and retrieve of the streaming URL of the song
-                    is being made by calling an AWS Lambda function that acts as
-                    an API for reaching AWS components such as S3 Bucket Token
-                    and Cloudfront.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Middleware</h3>
-                <p>
-                    The protection of the endpoint is being made thanks to a JWT
-                    Token system. The server on user's login issues a signed JWT
-                    Token containing user info and role that is going to be sent
-                    by the user on every request to the server. The check of
-                    token permissions is made in a middleware that checks the
-                    expire date, verifies the signed token and allows or not the
-                    request depending on users info.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>AWS Lambda</h3>
-                <img
-                    class="img-fluid"
-                    src={songArchitecture}
-                    alt="song architecture diagram"
-                />
-                <p>
-                    This service is working like an API between the Backend and
-                    the AWS services. Songs are stored in S3 buckets and for
-                    streaming them we need cloudfront as a provider. Our Lambda
-                    function allows for a low use of AWS credits and works with
-                    the Python SDK Boto with an API Key and a static url.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>MongoDB</h3>
-                <p>
-                    Perfect for fast development and constant changing features.
-                    Stores hashed password from users and all the app data
-                    except from song files. Python Backend access the database
-                    by using PyMongo driver. It has different databases for both
-                    testing and production that are being selected by dependency
-                    inyection.
-                </p>
-            </div>
-        </div>
-    </section>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Electron</h3>
+        <p>
+          Develop once and run everywhere is a must if you have a small team of
+          developers. With Electron the application interface can access easily
+          OS resources such as file explorer, clipboard, notification system...
+          The app can be installed as a normal executable and loads
+          significantly faster when it's build. Security is one of the most
+          important Electron goals so every connection with the system OS must
+          be declared beforehand in the preload file. Also both renderer and
+          main threads work in isolation mode and must communicate with the
+          Context Bridge via IPC (Inter-Process Comunication), this ensures
+          security and stability of the app.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>React with TypeScript</h3>
+        <p>
+          Runtime errors usually take longer to debug and can cause unexpected
+          issues on production. By using TypeScript & EsLint the amount of bugs
+          and other issues decreased by a lot. Thanks to the type safety and
+          strict linter mode most of the runtime problems can be avoided and
+          fixed in development, this also make the app more robust. React offers
+          us abstraction, hierarchy of components and most important
+          encapsulation between the components. This allows parallel development
+          without making and impact on others code.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Interface</h3>
+        <img
+          alt="frontend architecture diagram"
+          class="img-fluid"
+          src={frontendArchitecture}
+        />
+        <p>
+          Graphical elements of the interface are developed using web tech like <strong
+            >HTML</strong
+          > and <strong>CSS</strong>, also the app uses components from <strong
+            >MaterialUI</strong
+          > and inline styles with <strong>Boostrap</strong> that speeds up the development
+          process.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Python Backend API</h3>
+        <p>
+          Develop using <a
+            href="https://fastapi.tiangolo.com/tutorial/bigger-applications/"
+            >FastAPI larger apps architecture</a
+          > with middlewares for allowing CORS requests and allow the user to reach
+          certain resources with a JWT Token system. Song storage and retrieve of
+          the streaming URL of the song is being made by calling an AWS Lambda function
+          that acts as an API for reaching AWS components such as S3 Bucket Token
+          and Cloudfront.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Middleware</h3>
+        <p>
+          The protection of the endpoint is being made thanks to a JWT Token
+          system. The server on user's login issues a signed JWT Token
+          containing user info and role that is going to be sent by the user on
+          every request to the server. The check of token permissions is made in
+          a middleware that checks the expire date, verifies the signed token
+          and allows or not the request depending on users info.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>AWS Lambda</h3>
+        <img
+          alt="song architecture diagram"
+          class="img-fluid"
+          src={songArchitecture}
+        />
+        <p>
+          This service is working like an API between the Backend and the AWS
+          services. Songs are stored in S3 buckets and for streaming them we
+          need cloudfront as a provider. Our Lambda function allows for a low
+          use of AWS credits and works with the Python SDK Boto with an API Key
+          and a static url.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>MongoDB</h3>
+        <p>
+          Perfect for fast development and constant changing features. Stores
+          hashed password from users and all the app data except from song
+          files. Python Backend access the database by using PyMongo driver. It
+          has different databases for both testing and production that are being
+          selected by dependency inyection.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <h2>Backend Endpoints</h2>
-        <div>
-            <img
-                class="img-fluid"
-                src={backendEndpointDiagram}
-                alt="backend-endpoint-diagram"
-            />
-        </div>
-        <div class="architecture-secondary-text-wrapper">
-            <h3>Safety</h3>
-            <p>
-                All endpoints are protected by JWT Token Authorization, if you
-                want to make requests to the API you will need to add the
-                "Authorization" header to all requests.
-            </p>
-            <h3>API Documentation</h3>
-            <p>
-                API documentation is available by checking <a
-                    href="https://raw.githack.com/AntonioMrtz/SpotifyElectron/master/Backend%20API/api-docs-spotify-electron.html"
-                    >this page</a
-                > or running the backend and accessing <strong
-                    >http://127.0.0.1:8000/docs</strong
-                >
-            </p>
-        </div>
-    </section>
-    <section>
-        <h2>🤖Github Actions CI/CD</h2>
-        <div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Run tests</h3>
-                <p>
-                    Runs both backend and frontend test suite everytime a pull
-                    request is created.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Force branch format</h3>
-                <p>
-                    On every new branch created checks the if the name of the
-                    branch follows a pattern established on CONTRIBUTING.md
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Generate backend docs</h3>
-                <p>
-                    Everytime a branch is closed and has a merged status runs a
-                    script that updates the html file with Backend API
-                    documentation.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <h2>🧾Testing</h2>
-        <div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Frontend</h3>
-                <p>
-                    More than 85% coverage unit testing the component and pages
-                    of the interface with React Testing Library and Jest.
-                </p>
-            </div>
-            <div class="architecture-secondary-text-wrapper">
-                <h3>Backend</h3>
-                <p>
-                    Almost 100% unit test coverage in all the methods that are
-                    being used in every endpoint using PyTest.
-                </p>
-            </div>
-        </div>
-    </section>
+  <section>
+    <h2>Backend Endpoints</h2>
+    <div>
+      <img
+        alt="backend-endpoint-diagram"
+        class="img-fluid"
+        src={backendEndpointDiagram}
+      />
+    </div>
+    <div class="architecture-secondary-text-wrapper">
+      <h3>Safety</h3>
+      <p>
+        All endpoints are protected by JWT Token Authorization, if you want to
+        make requests to the API you will need to add the "Authorization" header
+        to all requests.
+      </p>
+      <h3>API Documentation</h3>
+      <p>
+        API documentation is available by checking <a
+          href="https://raw.githack.com/AntonioMrtz/SpotifyElectron/master/Backend%20API/api-docs-spotify-electron.html"
+          >this page</a
+        > or running the backend and accessing <strong
+          >http://127.0.0.1:8000/docs</strong
+        >
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2>🤖Github Actions CI/CD</h2>
+    <div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Run tests</h3>
+        <p>
+          Runs both backend and frontend test suite everytime a pull request is
+          created.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Force branch format</h3>
+        <p>
+          On every new branch created checks the if the name of the branch
+          follows a pattern established on CONTRIBUTING.md
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Generate backend docs</h3>
+        <p>
+          Everytime a branch is closed and has a merged status runs a script
+          that updates the html file with Backend API documentation.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>🧾Testing</h2>
+    <div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Frontend</h3>
+        <p>
+          More than 85% coverage unit testing the component and pages of the
+          interface with React Testing Library and Jest.
+        </p>
+      </div>
+      <div class="architecture-secondary-text-wrapper">
+        <h3>Backend</h3>
+        <p>
+          Almost 100% unit test coverage in all the methods that are being used
+          in every endpoint using PyTest.
+        </p>
+      </div>
+    </div>
+  </section>
 </div>
 
 <style>
-    .architecture-wrapper {
-        padding: 0 2rem;
-    }
-    .architecture-secondary-text-wrapper {
-        margin-bottom: 2em;
-    }
-    h2 {
-        margin-bottom: 2rem;
-        border-left: 5px solid var(--app-logo-color-darker);
-        padding-left: 2%;
-    }
+  .architecture-wrapper {
+    padding: 0 2rem;
+  }
+  .architecture-secondary-text-wrapper {
+    margin-bottom: 2em;
+  }
+  h2 {
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--app-logo-color-darker);
+    padding-left: 2%;
+  }
 
-    h3 {
-        padding-left: 2%;
-        border-left: 1px solid var(--app-logo-color-darker);
-        margin-bottom: 1rem;
-    }
+  h3 {
+    padding-left: 2%;
+    border-left: 1px solid var(--app-logo-color-darker);
+    margin-bottom: 1rem;
+  }
 
-    section {
-        margin: 5rem 0 5rem 0;
-    }
+  section {
+    margin: 5rem 0 5rem 0;
+  }
 
-    img {
-        margin-bottom: 2rem;
-    }
-    p {
-        color: var(--subheader-text-darker);
-    }
+  img {
+    margin-bottom: 2rem;
+  }
+  p {
+    color: var(--subheader-text-darker);
+  }
 
-    p a:hover {
-        text-decoration: underline;
-    }
+  p a:hover {
+    text-decoration: underline;
+  }
 </style>

@@ -3,136 +3,141 @@ import antonioMrtzLogoIcon from "../../public/icons/logoAM.png?url";
 ---
 
 <footer>
-    <div class="col-wrapper">
-        <div class="col main-col">
-            <div class="header">Spotify Electron</div>
-        </div>
-
-        <div class="d-flex flex-row flex-grow-1 secondary-col">
-            <div class="col">
-                <div class="header">App</div>
-                <div>
-                    <ul>
-                        <li>
-                            <a
-                                href="https://github.com/AntonioMrtz/SpotifyElectron/releases"
-                                >Download</a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/AntonioMrtz/SpotifyElectron"
-                                >Repository</a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/AntonioMrtz/SpotifyElectron/blob/master/.github/CONTRIBUTING.md"
-                                >Contribute</a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/AntonioMrtz/SpotifyElectron/blob/master/LICENSE"
-                                >License</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="header">Personal</div>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="https://antoniomrtz.github.io/Portfolio/"
-                                >Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/AntonioMrtz">Github</a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.linkedin.com/in/antonio-martinez-fern%C3%A1ndez-7b2a3224b/"
-                                >Linkedin</a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.instagram.com/antonio_martin3z/"
-                                >Instagram</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <div class="col-wrapper">
+    <div class="col main-col">
+      <div class="header">Spotify Electron</div>
     </div>
 
-    <div class="bottom-content mt-5">
-        <div
-            class="d-flex flex-row align-items-center justify-content-center gap-3"
-        >
-            <img src={antonioMrtzLogoIcon} class="img-fluid" alt="antonio martinez icon" />
-            <div
-                style="font-weight: 500;font-size:1.2rem;color:var(--app-logo-color)"
-            >
-                Made by Antonio Martínez Fernandez
-            </div>
+    <div class="d-flex flex-row flex-grow-1 secondary-col">
+      <div class="col">
+        <div class="header">App</div>
+        <div>
+          <ul>
+            <li>
+              <a href="https://github.com/AntonioMrtz/SpotifyElectron/releases"
+                >Download</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/AntonioMrtz/SpotifyElectron"
+                >Repository</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/AntonioMrtz/SpotifyElectron/blob/master/.github/CONTRIBUTING.md"
+                >Contribute</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/AntonioMrtz/SpotifyElectron/blob/master/LICENSE"
+                >License</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="col">
+        <div class="header">Personal</div>
+        <div>
+          <ul>
+            <li>
+              <a href="https://antoniomrtz.github.io/Portfolio/">Portfolio</a>
+            </li>
+            <li>
+              <a href="https://github.com/AntonioMrtz">Github</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/antonio-martinez-fern%C3%A1ndez-7b2a3224b/"
+                >Linkedin</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/antonio_martin3z/">Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="bottom-content mt-5">
+    <div
+      class="d-flex flex-row align-items-center justify-content-center gap-3"
+    >
+      <img
+        alt="antonio martinez icon"
+        class="img-fluid"
+        src={antonioMrtzLogoIcon}
+      />
+      <div
+        style="font-weight: 500;font-size:1.2rem;color:var(--app-logo-color)"
+      >
+        Made by Antonio Martínez Fernandez
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style>
-    footer {
-        border-top: 2px solid var(--spacer);
-        padding: 6%;
-    }
+  footer {
+    border-top: 2px solid var(--spacer);
+    padding: 6%;
+  }
 
+  .col-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer .col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-col .header {
+    font-weight: 500;
+    font-size: 2rem;
+    color: rgb(219, 218, 218);
+  }
+
+  .secondary-col ul {
+    gap: 20px;
+  }
+
+  .secondary-col li {
+    margin-bottom: 5px;
+  }
+  .secondary-col .header {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: rgb(219, 218, 218);
+    margin-bottom: 0.5rem;
+  }
+  .secondary-col a {
+    color: rgb(97, 97, 97);
+    font-size: 1.1rem;
+  }
+
+  .secondary-col a:hover {
+    color: rgb(172, 172, 172);
+  }
+
+  .bottom-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 989px) {
     .col-wrapper {
-        display: flex;
-        flex-direction: row;
+      flex-direction: column !important;
     }
-
-    footer .col {
-        display: flex;
-        flex-direction: column;
+    .header {
+      margin-bottom: 1rem;
     }
-
-    .main-col .header {
-        font-weight: 500;
-        font-size: 2rem;
-        color: rgb(219, 218, 218);
-    }
-
-    .secondary-col ul {
-        gap: 20px;
-    }
-
-    .secondary-col li {
-        margin-bottom: 5px;
-    }
-    .secondary-col .header {
-        font-weight: 500;
-        font-size: 1.3rem;
-        color: rgb(219, 218, 218);
-        margin-bottom: 0.5rem;
-    }
-    .secondary-col a {
-        color: rgb(97, 97, 97);
-        font-size: 1.1rem;
-    }
-
-    .secondary-col a:hover {
-        color: rgb(172, 172, 172);
-    }
-
-    .bottom-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    @media (max-width: 989px) {
-        .col-wrapper {
-            flex-direction: column !important;
-        }
-        .header {
-            margin-bottom: 1rem;
-        }
-    }
+  }
 </style>

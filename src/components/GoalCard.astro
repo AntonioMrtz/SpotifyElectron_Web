@@ -4,35 +4,35 @@ const { text } = Astro.props;
 ---
 
 <div class="d-flex flex-row wrapperGoalCard">
-    <img src={icon} alt=`${icon}` />
-    <p>{text}</p>
+  <img alt=`${icon}` src={icon} />
+  <p>{text}</p>
 </div>
 
 <style>
+  .wrapperGoalCard {
+    gap: 14px;
+    align-items: center;
+  }
+
+  .wrapperGoalCard img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .wrapperGoalCard p {
+    margin-bottom: auto;
+    margin-top: auto;
+    font-size: 1.75rem;
+    width: 100%;
+  }
+
+  @media (max-width: 1332px) {
     .wrapperGoalCard {
-        gap: 14px;
-        align-items: center;
+      gap: 28px;
+      padding: 0 14px 0 14px;
     }
-
-    .wrapperGoalCard img {
-        width: 62px;
-        height: 62px;
+    p {
+      font-size: 1.25rem !important;
     }
-
-    .wrapperGoalCard p {
-        margin-bottom: auto;
-        margin-top: auto;
-        font-size: 1.75rem;
-        width: 100%;
-    }
-
-    @media (max-width: 1332px) {
-        .wrapperGoalCard {
-            gap: 28px;
-            padding: 0 14px 0 14px;
-        }
-        p{
-            font-size: 1.25rem !important;
-        }
-    }
+  }
 </style>
