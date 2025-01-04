@@ -1,6 +1,6 @@
 # Spotify Electron Web
 
-🎯 A website developed using HTML, CSS, and JavaScript with the ASTRO framework to promote the desktop music streaming application Spotify Electron.
+🎯 A lading page designed to promote the desktop music streaming application Spotify Electron. Built using [Astro](https://astro.build/).
 
 ![Inicio](assets/landing_page.png)
 <br>
@@ -59,19 +59,3 @@ pre-commit run --all-files
 4. Recommended
 5. Workspace recommended
 6. Install workspace recommended
-
----
-
-<br>
-
-![Home](assets/home_landing_page.png)
-<br>
-
-![Goals](assets/goals_landing_page.png)
-<br>
-
-![Tech](assets/tech_landing_page.png)
-<br>
-
-![Architecture](assets/architecture_landing_page.png)
-<br>
