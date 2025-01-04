@@ -22,4 +22,4 @@ jobs:
       - name: Change directory and run commands
         run: |
           npm install
-          npm run eslint:check
+          npm run lint:check
