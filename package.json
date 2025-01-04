@@ -5,11 +5,17 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "format:write": "prettier src/ --write .",
+    "format:check": "prettier src/ --check .",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.1.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

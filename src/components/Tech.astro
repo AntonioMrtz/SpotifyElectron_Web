@@ -13,104 +13,104 @@ import miuIco from "../../public/icons/materialui.png?url";
 import gaIco from "../../public/icons/github_actions.png?url";
 
 const techCardData = [
-    {
-        icon: reactIco,
-        title: "ReactJS",
-        text: "The perfect choice for developing large, scalable and reusable interfaces. When multiple people is colaborating in the same interface the modularization of components is a must",
-        link: "https://es.react.dev/",
-    },
-    {
-        icon: tsIco,
-        title: "TypeScript",
-        text: "Preventing runtime errors, improving code quality and facilitating the development experience have being the main reason for using this superset of JavaScript",
-        link: "https://www.typescriptlang.org/",
-    },
-    {
-        icon: electronIco,
-        title: "ElectronJS",
-        text: "The framework for developing cross-platform was the perfect choice for this project. Develop once and run everywhere",
-        link: "https://www.electronjs.org/es/",
-    },
-    {
-        icon: mongoIco,
-        title: "MongoDB",
-        text: "Fast non relational database. Used mainly for constant-changing schemas, this works perfectly with the incremental develop of the app",
-        link: "https://www.mongodb.com/es",
-    },
-    {
-        icon: cssIco,
-        title: "CSS",
-        text: "The backbone of the app's interfaces. Fast and reliable, it allows full control and responsive behaviour",
-        link: "https://developer.mozilla.org/es/docs/Web/CSS",
-    },
-    {
-        icon: pyIco,
-        title: "Python",
-        text: "Used in combination with Fast API to serve the API that is being consumed by the frontend application and for comunicating with the database for persistency",
-        link: "https://www.python.org/",
-    },
-    {
-        icon: fastApiIco,
-        title: "Fast API",
-        text: "Scalable and high performance framework used to create the API. It also offers a full documented Swagger page with the various endpoints",
-        link: "https://fastapi.tiangolo.com/",
-    },
-    {
-        icon: boostrapIco,
-        title: "Boostrap",
-        text: "Frontend toolkit for fast development and responsive interfaces",
-        link: "https://getbootstrap.com/",
-    },
-    /* {
+  {
+    icon: reactIco,
+    title: "ReactJS",
+    text: "The perfect choice for developing large, scalable and reusable interfaces. When multiple people is colaborating in the same interface the modularization of components is a must",
+    link: "https://es.react.dev/",
+  },
+  {
+    icon: tsIco,
+    title: "TypeScript",
+    text: "Preventing runtime errors, improving code quality and facilitating the development experience have being the main reason for using this superset of JavaScript",
+    link: "https://www.typescriptlang.org/",
+  },
+  {
+    icon: electronIco,
+    title: "ElectronJS",
+    text: "The framework for developing cross-platform was the perfect choice for this project. Develop once and run everywhere",
+    link: "https://www.electronjs.org/es/",
+  },
+  {
+    icon: mongoIco,
+    title: "MongoDB",
+    text: "Fast non relational database. Used mainly for constant-changing schemas, this works perfectly with the incremental develop of the app",
+    link: "https://www.mongodb.com/es",
+  },
+  {
+    icon: cssIco,
+    title: "CSS",
+    text: "The backbone of the app's interfaces. Fast and reliable, it allows full control and responsive behaviour",
+    link: "https://developer.mozilla.org/es/docs/Web/CSS",
+  },
+  {
+    icon: pyIco,
+    title: "Python",
+    text: "Used in combination with Fast API to serve the API that is being consumed by the frontend application and for comunicating with the database for persistency",
+    link: "https://www.python.org/",
+  },
+  {
+    icon: fastApiIco,
+    title: "Fast API",
+    text: "Scalable and high performance framework used to create the API. It also offers a full documented Swagger page with the various endpoints",
+    link: "https://fastapi.tiangolo.com/",
+  },
+  {
+    icon: boostrapIco,
+    title: "Boostrap",
+    text: "Frontend toolkit for fast development and responsive interfaces",
+    link: "https://getbootstrap.com/",
+  },
+  /* {
         icon: miuIco,
         title: "Material UI",
         text: "",
         link : "https://mui.com/"
-    
+
     }, */
-    {
-        icon: gaIco,
-        title: "Github Actions",
-        text: "Integrated CI/CD tool used for running tests and validating the codebase with the linter. Syntax of new branches is also being checked",
-        link: "https://github.com/features/actions",
-    },
+  {
+    icon: gaIco,
+    title: "Github Actions",
+    text: "Integrated CI/CD tool used for running tests and validating the codebase with the linter. Syntax of new branches is also being checked",
+    link: "https://github.com/features/actions",
+  },
 ];
 ---
 
 <div class="grid">
-    {
-        techCardData.map((tech) => {
-            return (
-                <TechCard
-                    icon={tech.icon}
-                    title={tech.title}
-                    text={tech.text}
-                    link={tech.link}
-                />
-            );
-        })
-    }
+  {
+    techCardData.map((tech) => {
+      return (
+        <TechCard
+          icon={tech.icon}
+          title={tech.title}
+          text={tech.text}
+          link={tech.link}
+        />
+      );
+    })
+  }
 </div>
 
 <style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20vw, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+    margin-bottom: 8rem;
+  }
+
+  @media (max-width: 897px) {
     .grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(20vw, 1fr));
-        gap: 20px;
-        padding: 20px;
-
-        margin-bottom: 8rem;
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
 
-    @media (max-width: 897px) {
-        .grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
+  @media (max-width: 560px) {
+    .grid {
+      grid-template-columns: 1fr;
     }
-
-    @media (max-width: 560px) {
-        .grid {
-            grid-template-columns: 1fr;
-        }
-    }
+  }
 </style>

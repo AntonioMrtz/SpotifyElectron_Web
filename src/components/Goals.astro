@@ -12,93 +12,83 @@ import newIco from "../../public/icons/goals-icons/icons8-nuevo-48.png?url";
 import GoalCard from "./GoalCard.astro";
 
 const goalsCardData = [
-    {
-        icon: scalabilityIco,
-        text: "Developed for scalability and quick iterations",
-    },
-    {
-        icon: gitForkIco,
-        text: "Control version and contributions using Git",
-    },
-    {
-        icon: cloneIco,
-        text: "Full functionality clone of Spotify",
-    },
-    {
-        icon: goodPracticesIco,
-        text: "Developed with the best programming practices",
-    },
-    {
-        icon: writeIco,
-        text: "Cross platform with one codebase",
-    },
-    {
-        icon: testingIco,
-        text: "Full coverage test suite",
-    },
-    {
-        icon: securityIco,
-        text: "Focused on security",
-    },
-    {
-        icon: serverIco,
-        text: "Song streaming with AWS services",
-    },
-    {
-        icon: groupTaskIco,
-        text: "Agile development and team organization",
-    },
-    {
-        icon: newIco,
-        text: "Added new functionality",
-    },
+  {
+    icon: scalabilityIco,
+    text: "Developed for scalability and quick iterations",
+  },
+  {
+    icon: gitForkIco,
+    text: "Control version and contributions using Git",
+  },
+  {
+    icon: cloneIco,
+    text: "Full functionality clone of Spotify",
+  },
+  {
+    icon: goodPracticesIco,
+    text: "Developed with the best programming practices",
+  },
+  {
+    icon: writeIco,
+    text: "Cross platform with one codebase",
+  },
+  {
+    icon: testingIco,
+    text: "Full coverage test suite",
+  },
+  {
+    icon: securityIco,
+    text: "Focused on security",
+  },
+  {
+    icon: serverIco,
+    text: "Song streaming with AWS services",
+  },
+  {
+    icon: groupTaskIco,
+    text: "Agile development and team organization",
+  },
+  {
+    icon: newIco,
+    text: "Added new functionality",
+  },
 ];
 ---
 
 <div class="d-flex flex-row wrapperGoalCard">
-    <div class="d-flex flex-column goals-column">
-        {
-            goalsCardData.slice(0, 5).map((goalCardData) => {
-                return (
-                    <GoalCard
-                        icon={goalCardData.icon}
-                        text={goalCardData.text}
-                    />
-                );
-            })
-        }
-    </div>
+  <div class="d-flex flex-column goals-column">
+    {
+      goalsCardData.slice(0, 5).map((goalCardData) => {
+        return <GoalCard icon={goalCardData.icon} text={goalCardData.text} />;
+      })
+    }
+  </div>
 
-    <div class="d-flex flex-column goals-column">
-        {
-            goalsCardData.slice(5, goalsCardData.length).map((goalCardData) => {
-                return (
-                    <GoalCard
-                        icon={goalCardData.icon}
-                        text={goalCardData.text}
-                    />
-                );
-            })
-        }
-    </div>
+  <div class="d-flex flex-column goals-column">
+    {
+      goalsCardData.slice(5, goalsCardData.length).map((goalCardData) => {
+        return <GoalCard icon={goalCardData.icon} text={goalCardData.text} />;
+      })
+    }
+  </div>
 </div>
 
 <style>
+  .wrapperGoalCard {
+    padding-bottom: 8rem !important;
+    gap: 60px;
+  }
+  .goals-column {
+    gap: 14px;
+  }
+
+  @media (max-width: 1332px) {
     .wrapperGoalCard {
-        padding-bottom: 8rem !important;
-        gap: 60px;
+      flex-direction: column !important;
+      gap: 28px;
     }
     .goals-column {
-        gap: 14px;
+      gap: 28px;
     }
-
-    @media (max-width: 1332px) {
-        .wrapperGoalCard {
-            flex-direction: column !important;
-            gap: 28px;
-        }
-        .goals-column {
-            gap: 28px;
-        }
-    }
+  }
 </style>

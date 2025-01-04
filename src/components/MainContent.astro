@@ -2,69 +2,69 @@
 import TheApp from "./TheApp.astro";
 import Tech from "./Tech.astro";
 import Goals from "./Goals.astro";
-import Architecture from "./Architecture.astro"
+import Architecture from "./Architecture.astro";
 ---
 
 <main>
-    <div class="section-wrapper">
-        <section id="theapp">
-            <div class="d-flex flex-row">
-                <h2 style="margin-right: 15px;">The</h2><h2>App</h2>
-            </div>
-            <TheApp />
-        </section>
-    </div>
+  <div class="section-wrapper">
+    <section id="theapp">
+      <div class="d-flex flex-row">
+        <h2 style="margin-right: 15px;">The</h2><h2>App</h2>
+      </div>
+      <TheApp />
+    </section>
+  </div>
 
-    <div class="section-wrapper">
-        <section id="goals">
-            <h2>Goals</h2>
-            <Goals />
-        </section>
-    </div>
-    <div class="section-wrapper">
-        <section id="tech">
-            <h2>Tech</h2>
-            <Tech />
-        </section>
-    </div>
-    <div class="section-wrapper">
-        <section id="architecture">
-            <h2 style="margin-bottom: 4rem !important;">Architecture</h2>
-            <Architecture/>
-        </section>
-    </div>
+  <div class="section-wrapper">
+    <section id="goals">
+      <h2>Goals</h2>
+      <Goals />
+    </section>
+  </div>
+  <div class="section-wrapper">
+    <section id="tech">
+      <h2>Tech</h2>
+      <Tech />
+    </section>
+  </div>
+  <div class="section-wrapper">
+    <section id="architecture">
+      <h2 style="margin-bottom: 4rem !important;">Architecture</h2>
+      <Architecture />
+    </section>
+  </div>
 </main>
 
 <style>
-    main {
-        color: white !important;
-        font-size: 20px !important;
-        line-height: 1.6 !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  main {
+    color: white !important;
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    main .section-wrapper:nth-child(odd) {
-        background-color: var(--background-secondary);
-    }
-    h2 {
-        font-weight: 600;
-        font-size: 4rem;
-        margin-bottom: 8rem;
-    }
-    h2::first-letter {
-        color: var(--app-logo-color);
-    }
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  main .section-wrapper:nth-child(odd) {
+    background-color: var(--background-secondary);
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 8rem;
+  }
+  h2::first-letter {
+    color: var(--app-logo-color);
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        margin: auto !important;
-        max-width: 80rem !important;
-        padding-top: 2rem;
-        color: white;
-    }
+    margin: auto !important;
+    max-width: 80rem !important;
+    padding-top: 2rem;
+    color: white;
+  }
 </style>

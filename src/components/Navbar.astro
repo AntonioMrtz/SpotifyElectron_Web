@@ -5,245 +5,234 @@ import antonioMrtzIcon from "../../public/icons/AntonioMrtzIco.jpg?url";
 ---
 
 <nav class="navbar navbar-expand-lg bg-dark" id="nav-container">
-    <div class="container-fluid">
-        <nav class="navbar bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img
-                        src={spotifyElectronLogo}
-                        alt="SpotifyElectronLogo"
-                        width="30"
-                        height="30"
-                    />
-                </a>
-            </div>
-        </nav>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+  <div class="container-fluid">
+    <nav class="navbar bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src={spotifyElectronLogo}
+            alt="SpotifyElectronLogo"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+    </nav>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="brand-li">
+          <a class="navbar-brand" href="#" style="color:var(--naranja);"
+            >Spotify Electron</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#theapp"
+            >The App</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#goals">Goals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#tech">Tech</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#architecture"
+            >Architecture</a
+          >
+        </li>
+      </ul>
+      <div
+        class="navbar-right"
+        style="margin-right: 1.5rem; display: flex; justify-content: center; align-items: center;"
+      >
+        <a
+          class="navbar-item-right"
+          href="https://github.com/AntonioMrtz/SpotifyElectron"
         >
-            <span class="navbar-toggler-icon"> </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="brand-li">
-                    <a
-                        class="navbar-brand"
-                        href="#"
-                        style="color:var(--naranja);">Spotify Electron</a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a
-                        class="nav-link active"
-                        aria-current="page"
-                        href="#theapp">The App</a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#goals"
-                        >Goals</a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#tech"
-                        >Tech</a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#architecture"
-                        >Architecture</a
-                    >
-                </li>
-            </ul>
-            <div
-                class="navbar-right"
-                style="margin-right: 1.5rem; display: flex; justify-content: center; align-items: center;"
-            >
-                <a
-                    class="navbar-item-right"
-                    href="https://github.com/AntonioMrtz/SpotifyElectron"
-                >
-                    <img
-                        class="img-fluid"
-                        src={githubIcon}
-                        alt="Antonio Martinez Photo Icon"
-                        style="border-radius: 999px; width: 42px; height: 42px;"
-                    />
-                </a>
-                <a
-                    class="navbar-item-right"
-                    href="https://github.com/AntonioMrtz/"
-                >
-                    <img
-                        class="img-fluid"
-                        src={antonioMrtzIcon}
-                        alt="Github Icon"
-                        style="border-radius: 999px; width: 38px; height: 38px;"
-                    />
-                </a>
-            </div>
+          <img
+            class="img-fluid"
+            src={githubIcon}
+            alt="Antonio Martinez Photo Icon"
+            style="border-radius: 999px; width: 42px; height: 42px;"
+          />
+        </a>
+        <a class="navbar-item-right" href="https://github.com/AntonioMrtz/">
+          <img
+            class="img-fluid"
+            src={antonioMrtzIcon}
+            alt="Github Icon"
+            style="border-radius: 999px; width: 38px; height: 38px;"
+          />
+        </a>
+      </div>
 
-            <div
-                class="navbar-right-phone flex-column"
-                style="display: flex; justify-content: center; align-items: center;"
-            >
-                <a
-                    class="navbar-item-right-phone"
-                    href="https://github.com/AntonioMrtz/SpotifyElectron"
-                >
-                    <img
-                        class="img-fluid"
-                        src={githubIcon}
-                        alt="Antonio Martinez Photo Icon"
-                        style="border-radius: 999px; width: 42px; height: 42px;"
-                    />
-                    <span>Repository</span>
-                </a>
-                <a
-                    class="navbar-item-right-phone"
-                    href="https://github.com/AntonioMrtz/"
-                >
-                    <img
-                        class="img-fluid"
-                        src={antonioMrtzIcon}
-                        alt="Github Icon"
-                        style="border-radius: 999px; width: 38px; height: 38px;"
-                    />
-                    <span>AntonioMrtz</span>
-                </a>
-            </div>
-        </div>
+      <div
+        class="navbar-right-phone flex-column"
+        style="display: flex; justify-content: center; align-items: center;"
+      >
+        <a
+          class="navbar-item-right-phone"
+          href="https://github.com/AntonioMrtz/SpotifyElectron"
+        >
+          <img
+            class="img-fluid"
+            src={githubIcon}
+            alt="Antonio Martinez Photo Icon"
+            style="border-radius: 999px; width: 42px; height: 42px;"
+          />
+          <span>Repository</span>
+        </a>
+        <a
+          class="navbar-item-right-phone"
+          href="https://github.com/AntonioMrtz/"
+        >
+          <img
+            class="img-fluid"
+            src={antonioMrtzIcon}
+            alt="Github Icon"
+            style="border-radius: 999px; width: 38px; height: 38px;"
+          />
+          <span>AntonioMrtz</span>
+        </a>
+      </div>
     </div>
+  </div>
 </nav>
 
 <style>
-    #nav-container {
-        border-bottom: 1px solid var(--spacer);
-        padding: 0.75rem 0 0.75rem 0 !important;
-    }
-    .navbar {
-        background-color: var(--backkground) !important;
+  #nav-container {
+    border-bottom: 1px solid var(--spacer);
+    padding: 0.75rem 0 0.75rem 0 !important;
+  }
+  .navbar {
+    background-color: var(--backkground) !important;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .navbar-brand {
+    color: var(--app-logo-color) !important;
+    font-weight: 600 !important;
+    font-size: 1.35rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .brand-li {
+    margin-right: 1rem;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-weight: 500 !important;
+    font-size: 1.15rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .nav-link:hover {
+    filter: brightness(0.75);
+    transform: scale(1.1);
+  }
+
+  .navbar-item-right {
+    margin-right: 4px;
+    border-radius: 999px;
+  }
+
+  .navbar-item-right:hover {
+    filter: brightness(0.75);
+    box-shadow: 0 0 1px 2px var(--app-logo-color);
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem var(--app-logo-color-darker);
+  }
+
+  /* Phone Only */
+
+  .navbar-right-phone {
+    margin-top: 1rem;
+  }
+
+  .navbar-item-right-phone {
+    display: none;
+    border: 1px solid var(--spacer);
+    border-radius: 8px;
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+    color: white !important;
+    background-color: var(--dark-filler);
+    min-width: 200px !important;
+  }
+
+  .navbar-item-right-phone span {
+    flex-grow: 1;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-item-right-phone:first-child img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  @media (max-width: 989px) {
+    .nav-item {
+      width: 100% !important;
+      margin-bottom: 0.5rem;
     }
 
-    .navbar-nav {
-        align-items: center;
-    }
-
-    .navbar-brand {
-        color: var(--app-logo-color) !important;
-        font-weight: 600 !important;
-        font-size: 1.35rem !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+    .nav-item a {
+      font-size: 1.5rem !important;
+      padding: 0.5rem !important;
     }
 
     .brand-li {
-        margin-right: 1rem;
+      margin: 0 0 1rem 0 !important;
     }
 
-    .nav-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .brand-li a {
+      font-size: 2rem !important;
+      margin: 0 !important;
     }
 
-    .nav-link {
-        color: white !important;
-        font-weight: 500 !important;
-        font-size: 1.15rem !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        padding-right: 1rem !important;
-        padding-left: 1rem !important;
-    }
-
-    .nav-link:hover {
-        filter: brightness(0.75);
-        transform: scale(1.1);
-    }
-
-    .navbar-item-right {
-        margin-right: 4px;
-        border-radius: 999px;
-    }
-
-    .navbar-item-right:hover {
-        filter: brightness(0.75);
-        box-shadow: 0 0 1px 2px var(--app-logo-color);
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: 0 0 0 0.15rem var(--app-logo-color-darker);
-    }
-
-    /* Phone Only */
-
-    .navbar-right-phone {
-        margin-top: 1rem;
+    .navbar-right {
+      display: none !important;
     }
 
     .navbar-item-right-phone {
-        display: none;
-        border: 1px solid var(--spacer);
-        border-radius: 8px;
-        padding: 1%;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 0.5rem;
-        color: white !important;
-        background-color: var(--dark-filler);
-        min-width: 200px !important;
+      display: flex;
     }
-
-    .navbar-item-right-phone span {
-        flex-grow: 1;
-        font-weight: 500;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-item-right-phone:first-child img {
-        width: 38px !important;
-        height: 38px !important;
-    }
-
-    @media (max-width: 989px) {
-        .nav-item {
-            width: 100% !important;
-            margin-bottom: 0.5rem;
-        }
-
-        .nav-item a {
-            font-size: 1.5rem !important;
-            padding: 0.5rem !important;
-        }
-
-        .brand-li {
-            margin: 0 0 1rem 0 !important;
-        }
-
-        .brand-li a {
-            font-size: 2rem !important;
-            margin: 0 !important;
-        }
-
-        .navbar-right {
-            display: none !important;
-        }
-
-        .navbar-item-right-phone {
-            display: flex;
-        }
-    }
+  }
 </style>

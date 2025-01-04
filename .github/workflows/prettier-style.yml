@@ -1,0 +1,25 @@
+name:  Prettier Style
+
+on:
+  pull_request:
+    branches:
+      - "main"
+      - "main-*"
+
+jobs:
+  run-frontend-style-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Change directory and run commands
+        run: |
+          npm install
+          npm run format:check
