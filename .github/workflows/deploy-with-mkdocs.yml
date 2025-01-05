@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages with generated MkDocs from SpotifyElectron reposito
 
 on:
   push:
-    branches: [feat/5-integrate-mkdocs-inside-landing-page] # ! change it when test is done
+    branches: [main]
   workflow_dispatch:
 
 permissions:
