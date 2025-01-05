@@ -8,11 +8,11 @@ improve your coding skills, and enhance your communication abilities.
 
 ## 🖐️ Steps to Contribute
 
-1. Select an [issue](https://github.com/AntonioMrtz/SpotifyElectron/issues) and **ask to work on it by leaving a comment in the issue page(Not in Trello)**.
-2. Create a new branch with the feature you're implementing using the [branch naming convention](developer/Git-Convention.md).
-3. Push your changes to the new branch using the [commit naming convention](developer/Git-Convention.md).
+1. Select an [issue](https://github.com/AntonioMrtz/SpotifyElectron_Web/issues) and **ask to work on it by leaving a comment in the issue page(Not in Trello)**.
+2. Create a new branch with the feature you're implementing using the [branch naming convention](https://antoniomrtz.github.io/SpotifyElectron_Web/docs/developer/Git-Convention/).
+3. Push your changes to the new branch using the [commit naming convention](https://antoniomrtz.github.io/SpotifyElectron_Web/docs/CONTRIBUTING/).
 4. Add tests for every functionality changed or added.
-5. Go to your branch in Github, then select Pull Request and fill the fields indicated in the template. Remember to rename the Pull Request using our [convention](developer/Git-Convention.md).
+5. Go to your branch in Github, then select Pull Request and fill the fields indicated in the template. Remember to rename the Pull Request using our [convention](https://antoniomrtz.github.io/SpotifyElectron_Web/docs/developer/Git-Convention/).
 
 _It's important to leave a comment about working on an issue so the maintainer can add you as an assignee and avoid two people working on the same issue_.
 
