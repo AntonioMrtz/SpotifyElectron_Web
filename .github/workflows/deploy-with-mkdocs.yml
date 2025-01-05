@@ -40,8 +40,9 @@ jobs:
         run: |
           pip install -r main_repo/requirements-docs.txt
 
-      - name: Copy MkDocs build files
+      - name: BUild and Copy MkDocs build files
         run: |
+          mkdocs build
           cp -r main_repo/site/* ./public/docs/
 
       - name: Build the Astro site
