@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages with generated MkDocs from SpotifyElectron repository
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js for Astro (optional)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+
+      - name: Install dependencies (if required for your Astro build)
+        run: npm install
+
+      - name: Checkout MkDocs repo and copy site to the current project
+        uses: actions/checkout@v4
+        with:
+          repository: AntonioMrtz/SpotifyElectron # Replace with your MkDocs repository
+          path: main_repo # The path where you want the repo to be checked out
+
+      - name: Set up Python 3.11 for building MkDocs
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11'
+
+      - name: Install MkDocs and dependencies
+        run: |
+          pip install -r main_repo/requirements-docs.txt
+
+      - name: Copy MkDocs build files
+        run: |
+          cp -r main_repo/site/* ./public/docs/
+
+      - name: Build the Astro site
+        run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
