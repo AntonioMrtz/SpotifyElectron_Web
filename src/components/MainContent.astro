@@ -2,7 +2,6 @@
 import TheApp from "./TheApp.astro";
 import Tech from "./Tech.astro";
 import Goals from "./Goals.astro";
-import Architecture from "./Architecture.astro";
 ---
 
 <main>
@@ -22,15 +21,11 @@ import Architecture from "./Architecture.astro";
     </section>
   </div>
   <div class="section-wrapper">
-    <section id="tech">
-      <h2>Tech</h2>
+    <section id="tech-stack">
+      <div class="d-flex flex-row">
+        <h2 style="margin-right: 15px;">Tech</h2><h2>Stack</h2>
+      </div>
       <Tech />
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="architecture">
-      <h2 style="margin-bottom: 4rem !important;">Architecture</h2>
-      <Architecture />
     </section>
   </div>
 </main>
