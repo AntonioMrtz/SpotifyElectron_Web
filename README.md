@@ -53,9 +53,8 @@ pre-commit run --all-files
 
 ## 🧩 Extensions (VSCode)
 
-1. Open the project Backend or Frontend (each one has its own recommended extensions)
-2. Go to extensions section on sidebar
-3. Select filter extensions
-4. Recommended
-5. Workspace recommended
-6. Install workspace recommended
+1. Go to extensions section on sidebar
+2. Select filter extensions
+3. Recommended
+4. Workspace recommended
+5. Install workspace recommended
