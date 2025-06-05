@@ -2,9 +2,9 @@ name: Prettier Style
 
 on:
   pull_request:
-    branches:
-      - "main"
-      - "main-*"
+
+permissions:
+  contents: read
 
 jobs:
   run-frontend-style-check:
