@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.18.1",
+    "astro": "^6.1.6",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
